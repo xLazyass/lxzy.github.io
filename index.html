@@ -315,20 +315,38 @@ h1,h2,h3,h4 { font-family:'Bricolage Grotesque',sans-serif; line-height:1.1; }
 /* ═══════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════ */
-footer { background:var(--text); color:var(--white); padding:44px clamp(20px,4.5vw,80px); }
-.footer-inner { max-width:1440px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
-.footer-logo { font-family:'Bebas Neue',cursive; font-size:38px; color:var(--white); letter-spacing:0.06em; filter:url(#roughen-sm); }
-.footer-copy { font-size:14px; color:rgba(255,255,255,0.38); }
-/*  FOOTER FIX */
-#contact.section { padding-bottom: 0; }
-
 footer {
   background: var(--text);
   color: var(--white);
-  padding: 44px clamp(20px,4.5vw,80px);
   width: 100%;
-  display: block;
-  margin: 0;
+  padding: 72px clamp(20px,4.5vw,80px) 0;
+}
+.footer-inner {
+  max-width: 1440px; margin: 0 auto;
+  display: flex; justify-content: space-between;
+  align-items: flex-start; flex-wrap: wrap; gap: 48px;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-left { display: flex; flex-direction: column; gap: 16px; max-width: 360px; }
+.footer-logo { font-family:'Bebas Neue',cursive; font-size: 42px; color: var(--white); letter-spacing: 0.06em; }
+.footer-tagline { font-size: 15px; color: rgba(255,255,255,0.38); line-height: 1.6; }
+.footer-socials { display: flex; gap: 12px; }
+.footer-social {
+  width: 40px; height: 40px; border-radius: 10px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; transition: all 0.22s;
+}
+.footer-social:hover { background: var(--indigo); border-color: var(--indigo); transform: translateY(-3px); }
+.footer-links { display: flex; flex-direction: column; gap: 14px; }
+.footer-links-title { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 4px; }
+.footer-links a { font-size: 15px; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+.footer-links a:hover { color: var(--white); }
+.footer-bottom {
+  max-width: 1440px; margin: 0 auto;
+  padding: 24px 0;
+  font-size: 13px; color: rgba(255,255,255,0.25);
 }
 /* ═══════════════════════════════════════
    RESPONSIVE
@@ -745,8 +763,26 @@ footer {
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="footer-inner">
-    <span class="footer-logo">LxZy</span>
-    <p class="footer-copy">&copy; <span id="year"></span> Karim Abdel-Nasser — LxZy. All rights reserved.</p>
+    <div class="footer-left">
+      <span class="footer-logo">LxZy</span>
+      <p class="footer-tagline">Threat detection. Incident response. Security automation.</p>
+      <div class="footer-socials">
+        <a href="mailto:Karim_abdelnasser@proton.me" class="footer-social" title="Email">✉️</a>
+        <a href="https://linkedin.com/in/karim-abdel-nasser-821816304" target="_blank" class="footer-social" title="LinkedIn">💼</a>
+        <a href="https://github.com/xLazyass" target="_blank" class="footer-social" title="GitHub">⬡</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <p class="footer-links-title">Navigation</p>
+      <a href="#whoami">Who Am I</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year"></span> Karim Abdel-Nasser — LxZy. All rights reserved.</span>
   </div>
 </footer>
 
