@@ -1,0 +1,10 @@
+[
+  {
+    "id": "zero-trust-lab-v2-build",
+    "title": "Building a Zero Trust Lab on Two Devices (ZTA Lab v2)",
+    "date": "2026-04-26",
+    "tags": ["Zero Trust", "pfSense", "Wazuh", "Lab"],
+    "summary": "Full walkthrough of architecting a dual-device Zero Trust lab aligned with NIST SP 800-207, using pfSense, Suricata, Authelia, Traefik, Wazuh, and Cloudflare Zero Trust.",
+    "content": "# Building ZTA Lab v2\n\nThis is a sample post — replace this with your actual write-up.\n\n## Overview\n\nThe lab runs two pfSense instances connected via IKEv2 IPsec tunnel, with VLANs split across both devices.\n\n## Stack\n\n- **pfSense** — dual instances, IKEv2 IPsec tunnel\n- **Suricata** — IDS/IPS at the perimeter\n- **Authelia** — SSO + MFA\n- **Traefik** — reverse proxy with automatic TLS\n- **Wazuh** — SIEM and EDR\n- **Cloudflare Zero Trust** — cloudflared tunnels, no WARP\n- **Tailscale** — management plane\n\n## Why Zero Trust?\n\nTraditional perimeter security assumes that anything inside the network is trusted. Zero Trust flips this: **never trust, always verify**.\n\n## Lessons Learned\n\nMore content coming soon..."
+  }
+]
