@@ -125,7 +125,7 @@ h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;}
 #experience{background:var(--bg);}
 .exp-list{display:flex;flex-direction:column;gap:28px;}
 .exp-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:36px 40px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:start;position:relative;overflow:hidden;transition:all 0.3s var(--ease);}
-.exp-card::before{content:'';position:absolute;inset-block:0;left:0;width:4px;background:var(--indigo);}
+.exp-card::before{content:'';position:absolute;top:0;bottom:0;left:0;width:4px;background:var(--indigo);}
 .exp-card:hover{box-shadow:0 16px 56px rgba(50,18,122,0.11);transform:translateY(-5px);}
 .exp-status{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;background:rgba(34,197,94,0.1);color:#15803d;border-radius:100px;font-size:13px;font-weight:700;margin-bottom:14px;}
 .exp-status-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse-green 2s ease-in-out infinite;}
@@ -138,15 +138,6 @@ h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;}
 .exp-date-col{text-align:right;}
 .exp-date{font-size:14px;font-weight:600;color:var(--muted);white-space:nowrap;}
 
-/* COURSES */
-#courses{background:var(--white);}
-.courses-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:22px;}
-.course-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 26px;transition:all 0.3s var(--ease);position:relative;overflow:hidden;}
-.course-card::after{content:'';position:absolute;top:0;right:0;width:80px;height:80px;background:radial-gradient(circle at top right,rgba(50,18,122,0.06),transparent 70%);pointer-events:none;}
-.course-card:hover{box-shadow:0 14px 48px rgba(50,18,122,0.12);transform:translateY(-7px);border-color:var(--indigo);}
-.course-name{font-family:'Bricolage Grotesque',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px;}
-.course-org{font-size:15px;color:var(--muted);margin-bottom:14px;}
-.course-desc{font-size:15px;color:var(--muted);line-height:1.65;}
 
 /* SERVICES */
 #services{background:var(--indigo);position:relative;overflow:hidden;}
@@ -198,14 +189,52 @@ h1,h2,h3,h4{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;}
 .clink-val{font-size:17px;font-weight:600;color:var(--text);}
 
 /* FOOTER */
-footer{background:var(--text);color:var(--white);padding:28px clamp(20px,4.5vw,80px);width:100%;display:block;}
+footer{background:var(--text);color:var(--white);padding:28px clamp(20px,4.5vw,80px);width:100%;}
 .footer-inner{max-width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
 .footer-logo{font-family:'Bebas Neue',cursive;font-size:32px;color:var(--white);letter-spacing:0.06em;}
 .footer-copy{font-size:14px;color:rgba(255,255,255,0.35);}
 
 /* RESPONSIVE */
-@media(max-width:1100px){.whoami-grid{grid-template-columns:1fr;}.whoami-visual{order:-1;}.contact-grid{grid-template-columns:1fr;}.proj-card{grid-template-columns:1fr;}.proj-visual{height:200px;}}
-@media(max-width:768px){.nav-links{display:none;}.hamburger{display:flex;}.stats-row{grid-template-columns:1fr 1fr;}.proj-card{padding:30px 24px;}.exp-card{grid-template-columns:1fr;padding:28px 24px;}.hero-title{font-size:clamp(80px,22vw,180px);}}
+@media(max-width:1100px){
+  .whoami-grid{grid-template-columns:1fr;}
+  .whoami-visual{order:-1;}
+  .proj-card{grid-template-columns:1fr;}
+  .proj-visual{height:220px;}
+  .contact-grid{grid-template-columns:1fr;gap:32px;}
+  .contact-sub{margin-bottom:0;}
+}
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero-title{font-size:clamp(72px,20vw,160px);}
+  .hero-sub{font-size:16px;}
+  .btn{padding:13px 26px;font-size:15px;}
+  .hero-actions{gap:10px;}
+  .section{padding:60px 0;}
+  .section-head{margin-bottom:40px;}
+  .section-h{font-size:clamp(30px,8vw,42px);}
+  .whoami-grid{gap:40px;}
+  .stats-row{grid-template-columns:1fr 1fr;}
+  .id-card{padding:32px 28px;}
+  .exp-card{grid-template-columns:1fr;padding:24px 20px;}
+  .exp-date-col{text-align:left;}
+  .exp-title{font-size:20px;}
+  .services-grid{grid-template-columns:1fr;}
+  .svc-card{padding:28px 22px;}
+  .proj-card{padding:28px 20px;gap:24px;}
+  .proj-visual{height:180px;}
+  .proj-num{font-size:60px;}
+  .proj-name{font-size:20px;}
+  .proj-desc{font-size:15px;}
+  .contact-grid{gap:28px;}
+  .contact-big{font-size:clamp(32px,8vw,52px);}
+  .contact-sub{font-size:16px;margin-bottom:0;}
+  .clink{padding:16px 18px;gap:14px;}
+  .clink-icon{width:42px;height:42px;font-size:18px;}
+  .clink-val{font-size:14px;word-break:break-all;}
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:6px;}
+  .footer-copy{font-size:12px;}
+}
 </style>
 </head>
 <body>
@@ -509,7 +538,7 @@ footer{background:var(--text);color:var(--white);padding:28px clamp(20px,4.5vw,8
 </section><!-- end #projects -->
 
 <!-- CONTACT -->
-<section id="contact" class="section" style="padding-bottom:0;">
+<section id="contact" class="section">
   <div class="wrap">
     <div class="contact-grid">
       <div class="reveal">
