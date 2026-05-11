@@ -453,10 +453,10 @@ footer{background:var(--text);color:var(--white);padding:28px clamp(20px,4.5vw,8
         <div>
           <div class="proj-num">01</div>
           <h3 class="proj-name">Zero Trust Architecture Lab</h3>
-          <p class="proj-desc">Architected a production-grade dual-device Zero Trust environment from scratch — aligned to NIST SP 800-207. Two physical machines connected via IKEv2 IPsec tunnel, 4 VLANs, Suricata IDS on both firewalls, ELK Stack + Fluent Bit aggregating cross-site logs, Traefik + Authelia MFA behind Cloudflare Zero Trust tunnels, and an isolated Kali VM on VLAN 40 for adversary simulation.</p>
+          <p class="proj-desc">Architected a production-grade dual-device Zero Trust environment from scratch — aligned to NIST SP 800-207. Two physical machines connected via IKEv2 IPsec tunnel, 4 VLANs, Suricata IDS on both firewalls, Splunk + Vector aggregating cross-site logs, Traefik + Authelia MFA behind Cloudflare Zero Trust tunnels, and an isolated Kali VM on VLAN 40 for adversary simulation.</p>
           <div class="proj-stack">
             <span class="stack">pfSense x2</span><span class="stack">IKEv2 IPsec</span><span class="stack">Suricata</span>
-            <span class="stack">ELK Stack</span><span class="stack">Fluent Bit</span><span class="stack">Traefik</span>
+            <span class="stack">Splunk</span><span class="stack">Vector</span><span class="stack">Traefik</span>
             <span class="stack">Authelia</span><span class="stack">Cloudflare ZT</span><span class="stack">Tailscale</span>
             <span class="stack">Docker</span><span class="stack">NIST SP 800-207</span>
           </div>
@@ -475,10 +475,10 @@ footer{background:var(--text);color:var(--white);padding:28px clamp(20px,4.5vw,8
         <div>
           <div class="proj-num">02</div>
           <h3 class="proj-name">Linux IAM Lab</h3>
-          <p class="proj-desc">A full Identity &amp; Access Management lab running on VirtualBox across 5 VMs. FreeIPA handles LDAP, Kerberos, DNS, and the internal CA. Keycloak federates identities and enforces TOTP MFA via OIDC/SAML. HashiCorp Vault manages secrets and PKI. Wazuh (Docker) captures all authentication events. WireGuard connects the management plane.</p>
+          <p class="proj-desc">A full Identity &amp; Access Management lab running on VirtualBox across 5 VMs. FreeIPA handles LDAP, Kerberos, DNS, and the internal CA. Keycloak federates identities and enforces TOTP MFA via OIDC/SAML. HashiCorp Vault manages secrets and PKI. Elastic captures all authentication events. WireGuard connects the management plane.</p>
           <div class="proj-stack">
             <span class="stack">FreeIPA</span><span class="stack">Keycloak</span><span class="stack">HashiCorp Vault</span>
-            <span class="stack">Wazuh</span><span class="stack">WireGuard</span><span class="stack">VirtualBox</span>
+            <span class="stack">ELK Stack</span><span class="stack">WireGuard</span><span class="stack">VirtualBox</span>
             <span class="stack">Docker</span><span class="stack">LDAP</span><span class="stack">Kerberos</span>
             <span class="stack">OIDC / SAML</span><span class="stack">PKI</span>
           </div>
